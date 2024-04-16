@@ -216,7 +216,7 @@ def model_fit_and_validate(X,y,n,sampling,model,deg1):
     l_ci=mean_confidence_interval(auc)[1]
     r_ci=mean_confidence_interval(auc)[2]
     plt.plot(base_fpr, mean_tprs, 'b',color='darkorange',
-         #lw=2,label=  '(AUC = %0.2f (CI: %0.2f - %0.2f)'  % (round(np.mean(auc),2),round(l_ci,2),round(r_ci,2)))
+         lw=2,label=  '(AUC = %0.2f (CI: %0.2f - %0.2f)'  % (round(np.mean(auc),2),round(l_ci,2),round(r_ci,2)))
     plt.legend(loc='lower right')
     plt.fill_between(base_fpr, tprs_lower, tprs_upper, color='grey', alpha=0.3)
     plt.savefig('roc.pdf')

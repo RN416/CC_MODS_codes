@@ -10,8 +10,11 @@ library(annotate)
 library(hgu133plus2.db)
 library(calibrate)
 library(affyio)
+
+
 #setwd to the folder titled data containing the .CEL files. This large folder has ~200 files
-setwd("~/CC_MODS_codes_github/data")
+setwd("/Users/zhounan/Documents/Github_Project/CC_MODS_codes/data")
+
 #subset the new phenotypic information stored in the variable MODS_pheno. This step assumes that you already have the phenotypic information for the MODS data
 tab=data.frame(Samples=MODS_pheno$Microarray.ID, 
                Outcome=MODS_pheno$Day.3.MODS.Trajectory_2_Day.7.MODS..1_No.Day.3.MODs.and.Yes.Day.7.MODS...0_No.Day.7.MODS)

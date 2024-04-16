@@ -3,6 +3,7 @@
 #..................................PREPARING GSE66099.........................................
 #gse66099gpl570GEM.RDS, gse66099gpl570KEY.RDS, mortality_predictors.rds are available from https://www.synapse.org/#!Synapse:syn5612563
 #preparing GSE66099 data with mortality labels
+setwd("~/CC_MODS_CODES")
 gse66099_processed_data = readRDS("gse66099gpl570GEM.RDS")
 gse66099_gene_key = readRDS("gse66099gpl570KEY.RDS")
 gse66099_gene_key = as.data.frame(gse66099_gene_key)
@@ -15,7 +16,6 @@ combined_mortality_predictors = combined_mortality_predictors[-c(which(combined_
 length(combined_mortality_predictors)
 gse66099_processed_data_mortality_genes = gse66099_processed_data[which(gse66099_processed_data$Genes %in% combined_mortality_predictors),]
 dim(gse66099_processed_data_mortality_genes) #110 genes by 363 patients
-
 
 #preparing GSE66099 data with MODS labels
 gse66099_mods_data = read.delim("DGE_RMA_MODS_day3day7.txt")
