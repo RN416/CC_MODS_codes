@@ -232,7 +232,6 @@ legend(3,2.5, legend=c("Upregulated", "Downregulated","Not Significant"),bty = "
 
 
 
-
 #MA plot
 number_genes <- dim(out)[1]
 

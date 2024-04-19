@@ -320,7 +320,6 @@ def feature_reduction_using_RFECV(model,X,y):
     new_X=X[X.columns[rfecv.support_==True]]
     return new_X
 
-
 def mean_confidence_interval(data, confidence=0.95):
     a = 1.0 * np.array(data)
     n = len(a)
